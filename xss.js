@@ -1,3 +1,4 @@
-<script>const music = new Audio("https://example.com/music.mp3");
-
-music.play(); </script>
+<script>
+document.body.style.transition = "transform 2s";
+document.body.style.transform = "rotate(180deg)";
+</script>
