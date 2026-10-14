@@ -1,0 +1,7 @@
+<script>
+document.body.innerHTML = `
+  <h1 style="text-align:center;margin-top:20%">
+    YOU HAVE BEEN HACKED 😂
+  </h1>
+`;
+</script>
